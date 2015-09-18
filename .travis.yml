@@ -6,8 +6,9 @@ python:
   - 3.4
 
 install:
+  - sudo apt-get install -qq gcc-4.8 g++-4.8
   - pip install -e .\[dev\]
-  - pip install git+git://github.com/SkyTruth/gpsdio.git --upgrade
+  - CC=g++-4.8 pip install git+git://github.com/SkyTruth/gpsdio.git --upgrade
   - pip install git+git://github.com/schwehr/libais.git --upgrade
 
 script:
