@@ -7,9 +7,9 @@ python:
 
 install:
   - sudo apt-get install -qq gcc-4.8 g++-4.8
-  - pip install -e .\[dev\]
-  - CC=g++-4.8 pip install git+git://github.com/SkyTruth/gpsdio.git --upgrade
-  - pip install git+git://github.com/schwehr/libais.git --upgrade
+  - CC=g++-4.8 pip install -e .\[dev\]
+  - CC=g++-4.8 pip install git+git://github.com/schwehr/libais.git --upgrade
+  - pip install git+git://github.com/SkyTruth/gpsdio.git --upgrade
 
 script:
   - py.test tests --cov gpsdio_nmea_driver --cov-report term-missing
